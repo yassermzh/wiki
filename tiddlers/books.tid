@@ -1,0 +1,13 @@
+created: 20191217105158083
+modified: 20191225172425013
+tags: 
+title: books
+type: text/vnd.tiddlywiki
+
+Coders at work
+
+* p102: code reading. 
+ * one walks through the code and the rest of us will observe.
+  * it shouldn't be something that we save for the end.  
+  * one saying "it's almost done". then you get the code. it's nothing there, or it's crap.
+* literate programming by Knuth.

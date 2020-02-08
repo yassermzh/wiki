@@ -1,0 +1,14 @@
+created: 20191104081914973
+modified: 20191104082408825
+tags: 
+title: layout papers
+type: text/vnd.tiddlywiki
+
+* Solving Linear Arithmetic Constraints
+for User Interface Applications: https://constraints.cs.washington.edu/solvers/uist97.pdf
+* A constraint-based layout approach to data visualization: https://vita.had.co.nz/papers/constrained-layout.pdf
+* https://constraints.cs.washington.edu/solvers/cassowary-tochi.pdfThe Cassowary Linear Arithmetic
+Constraint Solving Algorithm: 
+* Automatically Selecting and Optimizing Constraint
+Solver Procedures for Object-Constraint Languages: https://www.hpi.uni-potsdam.de/hirschfeld/publications/media/FelgentreffLehmannHirschfeldGerstenbergReschkeRueckertSieglerGraichenNicolaiSwart_2016_AutomaticallySelectingAndOptimizingConstraintSolverProceduresForObjectConstraintLanguages_AuthorsVersion.pdf
+* magvis: https://pdfs.semanticscholar.org/7f57/68fa10553c803d9cef1b22834fa4aba4c261.pdf

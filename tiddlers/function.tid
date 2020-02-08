@@ -1,0 +1,16 @@
+created: 20191230144909840
+modified: 20191231131124473
+tags: function
+title: function
+type: text/vnd.tiddlywiki
+
+function is a special [[relation]] where is from a you can't end up in two x, y where x<>y.
+
+```
+inc x = x + 1
+```
+
+''functions are left associative.'' so: 
+`inc inc 1` means `((inc inc) 1)` which here not working
+here use `$` which make right associative.
+`inc $ inc 2` returns `4`.

@@ -1,0 +1,24 @@
+created: 20191230155428810
+modified: 20191231131020016
+tags: [[Functional programming]] example functo applicative monad
+title: example Maybe as functor, applicative, monad
+type: text/vnd.tiddlywiki
+
+```
+data MMaybe a = MNothing | MJust a deriving (Show)
+
+instance Functor (MMaybe) where
+   fmap _ MNothing = MNothing
+   fmap f (MJust x) = MJust (f x)
+
+instance Applicative (MMaybe) where
+   pure x = MJust x 
+   MNothing <*> _ = MNothing
+   _ <*> MNothing = MNothing
+   MJust f <*> MJust x = MJust (f x)
+
+instance Monad (MMaybe) where
+   MNothing >>= _ = MNothing
+   MJust x >>= f = f x
+
+```

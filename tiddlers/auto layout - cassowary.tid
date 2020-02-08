@@ -1,0 +1,20 @@
+created: 20191102225434102
+modified: 20191112113136757
+tags: layout frontend cassowary
+title: auto layout - cassowary
+type: text/vnd.tiddlywiki
+
+* original demo: http://www.badros.com/greg/cassowary/js/quaddemo.html
+* visual format editor: https://rawgit.com/IjzerenHein/visualformat-editor/master/dist/index.html?vfl=example
+* js implementation of solver: https://github.com/slightlyoff/cassowary.js
+* implementations of cassowary: http://overconstrained.io/
+* https://cassowary.readthedocs.io/en/latest/topics/theory.html
+* https://nodejsethan.wordpress.com/2016/10/14/autolayout-js/
+* wrapper over cassowary in js for UI: https://github.com/IjzerenHein/autolayout.js
+* http://www.adaptagrams.org
+* https://ialab.it.monash.edu/webcola/
+* https://ialab.it.monash.edu/webcola/examples/SucroseBreakdown.html
+* http://users.monash.edu/~mwybrow/dunnart/
+* Apple layout cookbook with example https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSimpleConstraints.html
+*‌ Apple anatomy of constraint https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/AnatomyofaConstraint.html#//apple_ref/doc/uid/TP40010853-CH9-SW1
+* Android Constraint layout: https://developer.android.com/reference/android/support/constraint/ConstraintLayout

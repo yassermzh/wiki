@@ -1,0 +1,13 @@
+created: 20200125173944077
+modified: 20200125174210287
+tags: [[Functional programming]]
+title: curry
+type: text/vnd.tiddlywiki
+
+```
+((a,b) -> c) -> (a->b->c)
+```
+currying is the above function. 
+uncurrying is the reverse.
+
+this is built-in in haskell. so you write functions like this: `f a b`

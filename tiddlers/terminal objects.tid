@@ -1,0 +1,8 @@
+created: 20200119200929624
+modified: 20200119201139381
+tags: 
+title: terminal objects
+type: text/vnd.tiddlywiki
+
+In the category [[Set]], the terminal objects are singletons (a set in single object). 
+because for every set there is only one unique function into a singleton.

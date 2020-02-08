@@ -1,0 +1,15 @@
+created: 20191030085241789
+modified: 20191102225939198
+tags: cassowary [[logical programming]]
+title: programming by constraints
+type: text/vnd.tiddlywiki
+
+The code is list of constraints that a solver tries to find a solution for it. 
+
+* constraints 
+* solver
+* solution
+
+It maybe called logical programming.
+
+Cassowary is such an approach to solve the UI layout problem. It's a linear programming. Or an optimization problem: to minimize a function based on some constraints. 

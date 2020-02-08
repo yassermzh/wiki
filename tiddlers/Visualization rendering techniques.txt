@@ -1,0 +1,30 @@
+- Performance:
+  - technologies: SVG, canvas, WebGL
+    - SVG less developes required!
+    - Comparison:
+      - performance losses started to occur above 8,000 elements.
+      - For SVG and Canvas, a rough limit for a fluid interface is 10,000 graphical elements.
+      - SVG and Canvas perform almost equally, while the drop for WebGL is less extreme.
+      - Canvas is not faster than SVG:
+           it is often assumed that Canvas is faster than SVG, since the overhead
+           of adding DOM elements is removed. Although this could still be
+           true for initial rendering time, there is no advantage regarding FPS
+  - Flexible level of details: better to have less elements.
+    Make stuff not required hidden.
+  - Asynchronous Tile Loading:
+    split up the rendering effort to multiple threads. the client
+    has to start multiple threads (Webworker), where each of them
+    initializes a headless browser rendering instance (Offscreen Canvas).
+  - Optimize canvas rendering with layering
+  - Have few core components that the chart is composed out of them.
+    - for example, arrow overlapping here: https://github.com/vizzlo/vizzards/issues/3869
+  - gradual rendering: not all data points at the same time
+
+
+ - https://www.cs.tufts.edu/~remco/publications/2012/InfoVis2012-Poster-RenderingTechniques.pdf
+ - https://imld.de/cnt/uploads/Horak-2018-Graph-Performance.pdf
+ - https://developer.ibm.com/tutorials/wa-canvashtml5layering/#layer-example
+
+  - not measuring the text that has not changed
+  - pixi! d3 over webGL https://observablehq.com/@zakjan/force-directed-graph-pixi
+  - react-canvas: render react to canvas instead of DOM

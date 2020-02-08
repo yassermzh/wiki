@@ -1,0 +1,8 @@
+  https://medium.com/basecs/leveling-up-ones-parsing-game-with-asts-d7a6fc2400ff
+  https://astexplorer.net
+  https://ts-ast-viewer.com
+  https://ts-morph.com/setup/ast-viewers
+  https://github.com/dsherret/ts-morph
+  https://github.com/Microsoft/TypeScript/blob/master/src/compiler/emitter.ts#L238-L249
+  https://github.com/timocov/ts-transformer-minify-privates/blob/master/src/properties-minifier.ts
+  https://dev.doctorevidence.com/how-to-write-a-typescript-transform-plugin-fc5308fdd943

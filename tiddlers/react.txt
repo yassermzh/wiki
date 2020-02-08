@@ -1,0 +1,15 @@
+- react/js lessons:
+  - <A /> === <A /> // is false
+  - <A /> is React.createElement(A) and every timge create new object.
+  - react elements are immutable.
+  - React.cloneElement( element, [props], [...children] ) is almost equivalent to:  
+    <element.type {...element.props} {...props}>{children}</element.type>
+  - on functinoal component: if state is same. setting useState won't re-render.
+  - on class component, does re-render.
+- useEffect
+  The one catch is that this runs after react renders your component and ensures that your 
+  effect callback does not block browser painting. This differs from the behavior in class 
+  components where componentDidMount and componentDidUpdate run synchronously 
+  after rendering
+- useEffect callback runs async, so it’s not exactly like componentDidMount and componentDidUpdate. 
+  if you are updating DOM there, you might have flickering effect. then you using useLayoutEffect I guess.

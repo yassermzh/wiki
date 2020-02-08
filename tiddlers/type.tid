@@ -1,0 +1,31 @@
+created: 20191230145456164
+modified: 20191231131045356
+tags: [[Functional programming]] type
+title: type
+type: text/vnd.tiddlywiki
+
+type is a set.
+
+Types are little labels that values carry so that we can reason about the values.
+
+```
+data Point = Point { 
+    x :: Int,
+    y :: Int
+} deriving (Show)
+
+```
+
+* first Point is a type, second one data constructor
+* second one is a function: from two Int to type Point
+
+
+```
+data MyMaybe a = MyNothing | MyJust a 
+```
+
+* `a` is type parameter.
+*`MyMaybe` is a type constructor or a function
+* `MyMaybe Int` is a concrete type like `[Int]`
+* so `MyMaybe` is like `[]`. `MyMabe` is not itself a type. no value can have type of `MyMaybe`.
+
