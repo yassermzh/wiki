@@ -197,6 +197,8 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
+<li>$:/temp/search</li>
+
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
@@ -260,6 +262,8 @@ Error message and password prompt
 <li>total functions</li>
 
 <li>transducer</li>
+
+<li>Tutorials</li>
 
 <li>type</li>
 
@@ -9620,7 +9624,7 @@ functor</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200808154733198" list="$:/ControlPanel [[auto layout - cassowary]] git books functor [[Functional programming]] Contents react" modified="20200808154928726" title="$:/StoryList">
+<div created="20200808154733198" list="Tutorials $:/ControlPanel [[auto layout - cassowary]] git books functor [[Functional programming]] Contents react" modified="20200808154928726" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9680,6 +9684,9 @@ functor</pre>
         }
     }
 }</pre>
+</div>
+<div created="20200808155254923" modified="20200808155318524" title="$:/temp/search">
+<pre></pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -10088,23 +10095,54 @@ It maybe called logical programming.
 
 Cassowary is such an approach to solve the UI layout problem. It's a linear programming. Or an optimization problem: to minimize a function based on some constraints. </pre>
 </div>
-<div bag="default" created="20191102232225318" modified="20191102232933377" revision="0" tags="" title="react" type="text/plain">
-<pre>- react/js lessons:
-  - &lt;A /&gt; === &lt;A /&gt; // is false
-  - &lt;A /&gt; is React.createElement(A) and every timge create new object.
-  - react elements are immutable.
-  - React.cloneElement( element, [props], [...children] ) is almost equivalent to:  
-    &lt;element.type {...element.props} {...props}&gt;{children}&lt;/element.type&gt;
-  - on functinoal component: if state is same. setting useState won't re-render.
-  - on class component, does re-render.
-- useEffect
-  The one catch is that this runs after react renders your component and ensures that your 
-  effect callback does not block browser painting. This differs from the behavior in class 
-  components where componentDidMount and componentDidUpdate run synchronously 
-  after rendering
-- useEffect callback runs async, so it’s not exactly like componentDidMount and componentDidUpdate. 
-  if you are updating DOM there, you might have flickering effect. then you using useLayoutEffect I guess.
-</pre>
+<div bag="default" created="20191102232225318" modified="20200808155235320" revision="0" tags="" title="react" type="text/plain">
+<pre> * `&lt;A /&gt; === &lt;A /&gt;` is false
+ * `&lt;A /&gt;` is `React.createElement(A)` and every time creates new object.
+ * react elements are immutable.
+ * `React.cloneElement( element, [props], [...children] )` is almost equivalent to: `&lt;element.type {...element.props} {...props}&gt;{children}&lt;/element.type&gt;`
+  * on functional component: if state is same. setting useState won't re-render. on class component, does re-render.
+* `useEffect`: The one catch is that this runs after react renders your component and ensures that your   effect callback does not block browser painting. This differs from the behavior in class   components where componentDidMount and componentDidUpdate run synchronously   after rendering
+* `useEffect` callback runs async, so it’s not exactly like componentDidMount and componentDidUpdate. if you are updating DOM there, you might have flickering effect. then you using `useLayoutEffect` I guess.
+
+!! useEffect with deep comparison
+```
+useEffect(() =&gt; {}, [x,y])
+```
+does simple reference equality check on x and y. if they are objects it won't work that much. to fix this we can use useEffect without providing variables and do the comparison inside the function. just we need previous values to compare and for that we can use useRef:
+
+```
+   function usePrev(values) { 
+       const prev = React.useRef(); 
+       useEffect(() =&gt; { prev.current = values; });
+       return prev.current;
+   }
+
+   // inside the component
+   useEffect(() =&gt; { if (_.isEqual([x,y], prev)) return; ... });
+   const prev = usePrev([x,y]);
+```
+
+!! safe set when component is unmounted
+
+if we have a request on fly, and component is unmounted, and the client requesting that call is not supporting cancelation, we need to avoid setState or set with hooks. then we can do this:
+
+```
+function useMounted() {
+   const mounted = useRef(false);
+   useEffect(() =&gt; { 
+       mounted.current = true; 
+       return () =&gt; { mounted.current = false; }
+   }, []);
+   return mounted;
+}
+
+function useSafeSet(initial) {
+   const [state, setState] = useReducer((state, newState) =&gt; ({...state, ...newState}), initial);
+   const mounted = useMounted();
+   const safeSet = (...args) =&gt; mounted &amp;&amp; setState(...args);
+   return [state, safeSet];
+}
+```</pre>
 </div>
 <div bag="default" created="20191231220312848" modified="20191231220326444" revision="0" tags="" title="reader monad" type="text/vnd.tiddlywiki">
 <pre>https://mmhaskell.com/monads/reader-writer</pre>
@@ -10133,6 +10171,14 @@ because for every set there is only one unique function into a singleton.</pre>
 reducer = (accumulator, current) =&gt; accumulator
 transducer = reducer =&gt; reducer
 ```</pre>
+</div>
+<div created="20200808155319663" modified="20200808155337899" tags="" title="Tutorials">
+<pre>* https://www.robinwieruch.de/react-graphql-apollo-tutorial
+* https://www.robinwieruch.de/graphql-apollo-server-tutorial/
+* https://www.robinwieruch.de/node-express-server-rest-api/
+
+* effective ML: make it impossible to have wrong state https://vimeo.com/14313378#t=18m6s
+</pre>
 </div>
 <div bag="default" created="20191230145456164" modified="20191231131045356" revision="0" tags="[[Functional programming]] type" title="type" type="text/vnd.tiddlywiki">
 <pre>type is a set.
