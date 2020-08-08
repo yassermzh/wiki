@@ -1,6 +1,6 @@
 created: 20191230155428810
-modified: 20191231131020016
-tags: [[Functional programming]] example functo applicative monad
+modified: 20200209132149438
+tags: functor [[Functional programming]] example applicative monad
 title: example Maybe as functor, applicative, monad
 type: text/vnd.tiddlywiki
 

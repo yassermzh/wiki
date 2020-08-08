@@ -1,17 +1,13 @@
 created: 20191102233331684
-modified: 20191231130850396
+modified: 20200209131116626
 tags: 
 title: Functional programming
 type: text/vnd.tiddlywiki
 
-- lazy evaluation: the idea that functions don't evaluate their arguments
-
-curry in Haskell: `f x y` is same as `(f x) y`
-function application is left associative means:
-
-f x = x + 1
-g y = y * 2
-f g x = (f g) x
-
+* [[curry]]
+* [[category]]
+* [[functor]]
+* [[type]]
+* lazy evaluation: the idea that functions don't evaluate their arguments
 
 https://www.fpcomplete.com/blog/2018/10/is-rust-functional

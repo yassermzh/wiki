@@ -1,0 +1,34 @@
+created: 20200318132910124
+modified: 20200318140634888
+tags: 
+title: accessibility
+type: text/vnd.tiddlywiki
+
+* it considers color contrasts, voice over, headings.
+
+!! Tools
+* tota11y: chrome extension to report issues
+* react-axe:integrates to your react app and logs issues to console.
+* in mac, try accessibility from preferences to change contrast, voice over, and other options.
+
+!! How to fix
+* `<div role="main">`  is equal to this html5 version: `<main>`. 
+* html5 introduces new semantics for sectioning pages. like: `nav`, `footer` instead of `<div role="contentinfo">`.
+* input elements should have labels!
+* Every page should have `h1` heading. use headings to structure the app.
+
+```
+<header>
+  <h1>My Site</h1>
+</header>
+<main>
+   <div><h2>product title</h2 ></div>
+</main>
+<footer>
+</footer>
+```
+
+
+!!resources:
+
+* https://www.w3.org/TR/wai-aria-practices-1.1/

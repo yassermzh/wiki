@@ -1,8 +1,10 @@
 created: 20191102225434102
-modified: 20191112113136757
-tags: layout frontend cassowary
-title: auto layout - cassowary
+modified: 20200209133526274
+tags: layout cassowary
+title: auto layout
 type: text/vnd.tiddlywiki
+
+[[layout papers]]
 
 * original demo: http://www.badros.com/greg/cassowary/js/quaddemo.html
 * visual format editor: https://rawgit.com/IjzerenHein/visualformat-editor/master/dist/index.html?vfl=example

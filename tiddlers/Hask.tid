@@ -1,6 +1,40 @@
 created: 20200126171424807
-modified: 20200126171431025
+modified: 20200209132612391
+tags: category
 title: Hask
 type: text/vnd.tiddlywiki
 
 Hask is the category of Haskell types and functions.
+
+*objects: types
+*morphisms: functions
+
+
+In `f : a -> [a]`,
+is f just one function? or all these functions:
+
+*int -> [int]
+*char -> [char]
+
+because a is a type variable.
+
+one difference between a function and morphisms is that functions work on elements of sets. mapping each element in the domain set to only one element in the range. here, f is a function.
+
+
+```
+f: int -> [int]
+f x = [x + 1]
+
+```
+
+but morphisms are acting on objects, which could be sets themselves. like int, or char which are types. here f is a morphism?!
+
+
+```
+f: int -> [int]
+```
+
+
+because we don't define it? we don't care about elements? so this f can be all those functions that can be defined. in category theory, we don't care about details. it's more abstract.
+
+so here looks we have two levels of abstraction! all functions `int -> [int]`, and one level up: all those `a -> [a]`.

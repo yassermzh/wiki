@@ -1,0 +1,16 @@
+created: 20200216102603629
+modified: 20200216102641243
+tags: 
+title: unique symbol
+type: text/vnd.tiddlywiki
+
+```
+// Ensure we can not pass regular map to our custom functions
+type SymbolMapTag = { readonly symbol: unique symbol }
+
+type SymbolMap = SymbolMapTag & {
+    [Key in string | number | symbol]: string;
+}
+```
+
+https://stackoverflow.com/questions/59118271/using-symbol-as-object-key-type-in-typescript

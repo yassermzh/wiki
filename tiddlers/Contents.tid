@@ -1,7 +1,13 @@
 created: 20190723171746540
-modified: 20191030085026046
+modified: 20200322183545077
 tags: 
 title: Contents
 type: text/vnd.tiddlywiki
 
-All starts from here!
+Just my random notes about programming.
+
+* [[functional programming|Functional programming]]
+* [[react]]
+* [[git]]
+* [[auto layout]]
+* [[tutorials]]
