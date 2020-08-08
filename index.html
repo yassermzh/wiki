@@ -9624,7 +9624,7 @@ functor</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200808154733198" list="Tutorials $:/ControlPanel [[auto layout - cassowary]] git books functor [[Functional programming]] Contents react" modified="20200808154928726" title="$:/StoryList">
+<div created="20200808154733198" list="Tutorials $:/ControlPanel [[auto layout - cassowary]] git books functor [[Functional programming]] curry Contents react" modified="20200808155430698" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9685,8 +9685,8 @@ functor</pre>
     }
 }</pre>
 </div>
-<div created="20200808155254923" modified="20200808155318524" title="$:/temp/search">
-<pre></pre>
+<div created="20200808155254923" modified="20200808155402668" title="$:/temp/search">
+<pre>functiona</pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -9871,14 +9871,26 @@ we are talking about category which objects are [[types|type]] and morphisms are
 * [[auto layout]]
 * [[tutorials]]</pre>
 </div>
-<div bag="default" created="20200125173944077" modified="20200125174210287" revision="0" tags="[[Functional programming]]" title="curry" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200125173944077" modified="20200808155445661" revision="0" tags="[[Functional programming]]" title="curry" type="text/vnd.tiddlywiki">
 <pre>```
 ((a,b) -&gt; c) -&gt; (a-&gt;b-&gt;c)
 ```
 currying is the above function. 
 uncurrying is the reverse.
 
-this is built-in in haskell. so you write functions like this: `f a b`</pre>
+this is built-in in haskell. so you write functions like this: `f a b`
+
+curry in Haskell: `f x y` is same as `(f x) y`.
+
+function application is left associative means:
+
+```
+f x = x + 1
+g y = y * 2
+f g x = (f g) x
+```
+
+</pre>
 </div>
 <div bag="default" created="20191225173535263" draft.of="functor" draft.title="functor" list="" modified="20200119130952412" revision="0" tags="functor [[Functional programming]]" title="Draft of 'functor'" type="text/vnd.tiddlywiki">
 <pre>functors are mapping between [[categories|category]] that preserve structure.
@@ -9987,16 +9999,12 @@ here use `$` which make right associative.
 `inc $ inc 2` returns `4`.
 </pre>
 </div>
-<div bag="default" created="20191102233331684" modified="20191231130850396" revision="0" tags="" title="Functional programming" type="text/vnd.tiddlywiki">
-<pre>- lazy evaluation: the idea that functions don't evaluate their arguments
-
-curry in Haskell: `f x y` is same as `(f x) y`
-function application is left associative means:
-
-f x = x + 1
-g y = y * 2
-f g x = (f g) x
-
+<div bag="default" created="20191102233331684" modified="20200808155416827" revision="0" tags="" title="Functional programming" type="text/vnd.tiddlywiki">
+<pre>* [[curry]]
+* [[category]]
+* [[functor]]
+* [[type]]
+* lazy evaluation: the idea that functions don't evaluate their arguments
 
 https://www.fpcomplete.com/blog/2018/10/is-rust-functional</pre>
 </div>
