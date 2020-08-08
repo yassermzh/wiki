@@ -1,8 +1,0 @@
-  - typeof a Component: React.ComponentType
-  - typeof a <div.../>, like children:
-         React.ReactNode
-         or JSX.Element[] || JSX.Element
-
-  - const map = <T extends {}>(f: any) => (arr: T[]) => arr.map(f);
-  - function map<T>(f: any) { return (arr: T[]) => arr.map(f)};
-  - type G<T> = (v:T) => void;

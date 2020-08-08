@@ -1,8 +1,0 @@
-* resolve merge conflicts:
-
-
-```
-git co --theirs path/to/file.js
-git add .
-
-```
