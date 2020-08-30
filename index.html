@@ -179,6 +179,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -225,9 +227,7 @@ Error message and password prompt
 
 <li>curry</li>
 
-<li>Draft of 'functor'</li>
-
-<li>Draft of 'New Tiddler'</li>
+<li>Draft of 'New Tiddler 1'</li>
 
 <li>endofunctor</li>
 
@@ -250,6 +250,8 @@ Error message and password prompt
 <li>react</li>
 
 <li>reader monad</li>
+
+<li>ReasonML</li>
 
 <li>relation</li>
 
@@ -9603,6 +9605,9 @@ functor</pre>
 <div created="20200808154710785" modified="20200808154712470" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
+<div created="20200829154648952" modified="20200830123822153" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
 <div bag="default" created="20200208234139678" modified="20200208235140697" revision="4" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
@@ -9624,7 +9629,7 @@ functor</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200808160658136" list="Contents" modified="20200808160658136" title="$:/StoryList">
+<div created="20200829154620753" list="$:/ControlPanel functor ReasonML typescript [[Draft of 'New Tiddler 1']] Contents" modified="20200830123849868" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9640,27 +9645,27 @@ functor</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;http://127.0.0.1:8081/&quot;
+            &quot;text&quot;: &quot;file:///Users/yasser/works/yasser/wiki/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;127.0.0.1:8081&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;127.0.0.1&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;http:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
-            &quot;text&quot;: &quot;8081&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/&quot;
+            &quot;text&quot;: &quot;/Users/yasser/works/yasser/wiki/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9668,7 +9673,7 @@ functor</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;http://127.0.0.1:8081&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -9680,13 +9685,13 @@ functor</pre>
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-US&quot;
+            &quot;text&quot;: &quot;en-GB&quot;
         }
     }
 }</pre>
 </div>
-<div created="20200808155254923" modified="20200808155402668" title="$:/temp/search">
-<pre>functiona</pre>
+<div created="20200808155254923" modified="20200829154619154" title="$:/temp/search">
+<pre>types</pre>
 </div>
 <div author="JeremyRuston" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" revision="0" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -9892,72 +9897,7 @@ f g x = (f g) x
 
 </pre>
 </div>
-<div bag="default" created="20191225173535263" draft.of="functor" draft.title="functor" list="" modified="20200119130952412" revision="0" tags="functor [[Functional programming]]" title="Draft of 'functor'" type="text/vnd.tiddlywiki">
-<pre>functors are mapping between [[categories|category]] that preserve structure.
-
-functors map bag of object to another bag of objects. 
-functions map elements of a set to another elements of some set. and morphisms in first category to morphisms in the other one.
-
-Example in haskell: following could be a functor from category of Hask (or [[Set]]) to same category. 
-
-```
-data Identity a  = MkId a
-```
-
-`Identity` is a type constructor: a function that takes any type as value, and returns another type. 
-`Mkid` is a data constructor: a function that takes values of type `a` and returns values of type `Identity a`
-
-so far, it's about mapping the objects (sets in Set). now we try mapping of functions (morphisms in Set). 
-
-mapId :: (a -&gt; b) -&gt; Identity a -&gt; Identity b
-mapId f (MkId x) = MkId f x  
-
-
-mapId lifts f in first category into the other one.
-
-Functor is a typeclass in Haskell. 
-
-class Functor f where
-   fmap:: (a-&gt;b) -&gt; ( fa -&gt; fb)
-
-it introduces an interface for those containers that let you apply a function over their values.
-
-```
-fmap :: (Functor f) =&gt; (a -&gt; b) -&gt; f a -&gt; f b
-```
-
-Maybe is an instance of Functor:
-
-```
-instance Functor Maybe where
-   fmap f Just a = Just f a 
-   fmap f Nothing = Nothing
-```
-
-!! Examples
-
-fmap a function over maybe functor:
-
-```
-fmap (+3) Just 1 = Just (+3) 1 = Just 4
-```
-
-fmap a function over function functor is a just function composition.
-
-```
-fmap (+3) (*2) = (+3) . (*2) 
-fmap (+3) (*2) 1 = (+3) . (*2) 1 = 3 + (2 * 1)
-```
-
-!! laws to be a functor:
-
-```
-fmap id = id 
-fmap (f . g) = (fmap f) . (fmap g)
-```
-</pre>
-</div>
-<div bag="default" created="20200208235321378" draft.of="New Tiddler" draft.title="New Tiddler" modified="20200208235322600" revision="1" tags="" title="Draft of 'New Tiddler'" type="text/vnd.tiddlywiki">
+<div created="20200829154603365" draft.of="New Tiddler 1" draft.title="" modified="20200829154611986" tags="" title="Draft of 'New Tiddler 1'">
 <pre></pre>
 </div>
 <div bag="default" created="20200119100857737" modified="20200126171418446" revision="0" tags="" title="endofunctor" type="text/vnd.tiddlywiki">
@@ -10008,7 +9948,7 @@ here use `$` which make right associative.
 
 https://www.fpcomplete.com/blog/2018/10/is-rust-functional</pre>
 </div>
-<div bag="default" created="20191225173535263" list="" modified="20200208235414511" revision="1" tags="functor [[Functional programming]]" title="functor" type="text/vnd.tiddlywiki">
+<div bag="default" created="20191225173535263" list="" modified="20200830123810418" revision="0" tags="functor [[Functional programming]]" title="functor" type="text/vnd.tiddlywiki">
 <pre>functors are mapping between [[categories|category]] that preserve structure.
 
 functors map bag of object to another bag of objects. 
@@ -10155,6 +10095,23 @@ function useSafeSet(initial) {
 <div bag="default" created="20191231220312848" modified="20191231220326444" revision="0" tags="" title="reader monad" type="text/vnd.tiddlywiki">
 <pre>https://mmhaskell.com/monads/reader-writer</pre>
 </div>
+<div created="20200830123451017" modified="20200830123800548" tags="" title="ReasonML">
+<pre>
+data last (|&gt;) vs data first (-&gt;)
+
+```
+// a |&gt; f(b) turns into f(b, a).
+// a -&gt; f(b) is f(b, a)
+```
+for example
+
+```
+Js.log(1-&gt;((x, y) =&gt; 0 * x + y)(2));         //  2
+Js.log(1 |&gt; ((x, y) =&gt; 0 * x + y)(2));       //  1
+```
+
+</pre>
+</div>
 <div bag="default" created="20191231130129732" modified="20191231130136174" revision="0" tags="" title="relation" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
@@ -10254,8 +10211,15 @@ instance YesNo (Maybe a) where
 ```
 </pre>
 </div>
-<div bag="default" created="20191102232154545" modified="20191102232338288" revision="0" tags="typescript" title="typescript" type="text/plain">
-<pre>  - typeof a Component: React.ComponentType
+<div bag="default" created="20191102232154545" modified="20200829160017067" revision="0" tags="typescript" title="typescript" type="text/plain">
+<pre>
+type X = { x: string, y: number}
+type ValuesX = X[keyof X]
+
+type Values&lt;T&gt; = T[keyof T]
+
+
+  - typeof a Component: React.ComponentType
   - typeof a &lt;div.../&gt;, like children:
          React.ReactNode
          or JSX.Element[] || JSX.Element
@@ -10263,6 +10227,7 @@ instance YesNo (Maybe a) where
   - const map = &lt;T extends {}&gt;(f: any) =&gt; (arr: T[]) =&gt; arr.map(f);
   - function map&lt;T&gt;(f: any) { return (arr: T[]) =&gt; arr.map(f)};
   - type G&lt;T&gt; = (v:T) =&gt; void;
+
 </pre>
 </div>
 <div bag="default" created="20191102230625025" modified="20191102232819642" revision="0" tags="canvas svg visualization" title="Visualization rendering techniques" type="text/plain">
