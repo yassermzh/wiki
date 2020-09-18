@@ -227,8 +227,6 @@ Error message and password prompt
 
 <li>curry</li>
 
-<li>Draft of 'New Tiddler 1'</li>
-
 <li>endofunctor</li>
 
 <li>example Maybe as functor, applicative, monad</li>
@@ -9605,7 +9603,7 @@ functor</pre>
 <div created="20200808154710785" modified="20200808154712470" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200829154648952" modified="20200918152522488" title="$:/state/sidebar">
+<div created="20200829154648952" modified="20200918152620462" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div bag="default" created="20200208234139678" modified="20200208235140697" revision="4" title="$:/state/tab-1749438307">
@@ -9629,7 +9627,7 @@ functor</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200918152526549" list="ReasonML Contents" modified="20200918152531559" title="$:/StoryList">
+<div created="20200918152526549" list="typescript ReasonML Contents" modified="20200918152632414" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9896,9 +9894,6 @@ f g x = (f g) x
 ```
 
 </pre>
-</div>
-<div created="20200829154603365" draft.of="New Tiddler 1" draft.title="" modified="20200829154611986" tags="" title="Draft of 'New Tiddler 1'">
-<pre></pre>
 </div>
 <div bag="default" created="20200119100857737" modified="20200126171418446" revision="0" tags="" title="endofunctor" type="text/vnd.tiddlywiki">
 <pre>a functor from a category to same one.
@@ -10210,7 +10205,7 @@ instance YesNo (Maybe a) where
 ```
 </pre>
 </div>
-<div bag="default" created="20191102232154545" modified="20200831065834978" revision="0" tags="typescript" title="typescript" type="text/plain">
+<div bag="default" created="20191102232154545" modified="20200918152617862" revision="0" tags="typescript" title="typescript" type="text/plain">
 <pre>type X = { x: string, y: number}
 type ValuesX = X[keyof X]
 
@@ -10347,6 +10342,12 @@ rf({ name: 'ggg', value: 'g' })
 type A1 = {a: 'x'} | {a: 'y'}
 let a1: A1 = {a: 'x'}
 let a2: A1 = {a: 'y'}
+
+
+
+// react hoc is like taking a function, partially call it
+// f = (x, y) =&gt; x + y
+// hoc = (f) =&gt; { x = 1; return f(x) }
 </pre>
 </div>
 <div bag="default" created="20191102230625025" modified="20191102232819642" revision="0" tags="canvas svg visualization" title="Visualization rendering techniques" type="text/plain">
